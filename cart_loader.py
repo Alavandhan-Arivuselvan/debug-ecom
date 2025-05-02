@@ -1,7 +1,7 @@
 from discount_applier import apply_discounts
 
 def load_cart():
-    # In production, this could come from a database or frontend
+    
     cart = [
         {"name": "Laptop", "price": 1500.0, "quantity": 1},
         {"name": "Mouse", "price": 40.0, "quantity": 2},
@@ -9,10 +9,10 @@ def load_cart():
     ]
 
     for item in cart:
-        if not isinstance(item['price'], (int, float)) or item['price'] <= 0:
+        if not isinstance(item['price'], (int,float)) or item['price'] <= 0:
             raise ValueError(f"Invalid price in item: {item}")
-        if not isinstance(item['quantity'], int) or item['quantity'] <= 0:
+        if not isinstance(item['qty'], int) or item['quantity'] <= 0:
             raise ValueError(f"Invalid quantity in item: {item}")
 
-    coupon_code = "BULK5"  # Simulated input, e.g., from user selection
+    coupon_code = "Bulk5" 
     return apply_discounts(cart, coupon_code)

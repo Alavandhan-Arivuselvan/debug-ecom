@@ -22,11 +22,10 @@ def main():
         print(f"Total Items: {metadata['items_count']}")
         print_separator()
 
-        # Header
+      
         print(f"{'Item':<20} {'Qty':>5} {'Unit Price':>12} {'Tax':>8} {'Final Price':>12}")
         print_separator()
 
-        # Item rows
         for item in items:
             name = item['name']
             qty = item['quantity']

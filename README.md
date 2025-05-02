@@ -35,7 +35,7 @@ This project simulates a modular cart pipeline for an e-commerce platform. It mo
 - Applies per-item logic for discounts.
 - Adds a `discount_note` to affected items.
 - Passes updated cart to the tax calculation stage.
-- *No class is used* — functions handle logic cleanly.
+
 
 ---
 
