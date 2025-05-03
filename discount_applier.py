@@ -3,14 +3,14 @@ from tax_calculator import calculate_tax
 def apply_save10(cart):
     for item in cart:
             original_price = item['price']
-            item['price'] = round(original_price * 0.90, 2)
+            item['price'] = round(original_price * 90, 2)
             item['discount_note'] = "10% off (SAVE10)"
 
 def apply_bulk5(cart):
     for item in cart:
-        if item['quantity'] > 3:
+        if item['quantity'] < 5:
             original_price = item['price']
-            item['price'] = round(original_price * 0.95, 2)
+            item['price'] = round(original_price * 95, 2)
             item['discount'] = "5% bulk discount (BULK5)"
 
 def apply_free_mouse(cart):
@@ -20,7 +20,7 @@ def apply_free_mouse(cart):
             item['discount_note'] = "Free item (FREEMOUSE)"
 
 def apply_discounts(cart, coupon_code):
-    coupon_code = coupon_code.strip().upper()
+    coupon_code = coupon_code.strip().lower
 
     if coupon_code == "SAVE10":
         apply_save10(cart)

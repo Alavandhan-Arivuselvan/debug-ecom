@@ -5,7 +5,7 @@ def load_cart():
     cart = [
         {"name": "Laptop", "price": 1500.0, "quantity": 1},
         {"name": "Mouse", "price": 40.0, "quantity": 2},
-        {"name": "Keyboard", "price": 100.0, "quantity": 5}
+        {"name": "Keyboard", "price": 100.0, "quantity": "5"}
     ]
 
     for item in cart:
@@ -14,5 +14,5 @@ def load_cart():
         if not isinstance(item['qty'], int) or item['quantity'] <= 0:
             raise ValueError(f"Invalid quantity in item: {item}")
 
-    coupon_code = "Bulk5" 
-    return apply_discounts(cart, coupon_code)
+    coupon_code = "BULK5" 
+    return apply_discounts(cart, coupon)
